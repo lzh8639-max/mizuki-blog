@@ -1,10 +1,19 @@
-## 你好，我是慕雨棠 👋
+---
+title: Hello World
+published: 2026-04-09
+description: 我的第一篇博客文章
+tags: [入门, Hexo]
+category: 技术
+draft: false
+pinned: false
+comment: true
+---
 
-一个热爱技术的人，喜欢探索新技术，记录学习与生活。
+## 欢迎来到我的博客
+
+这是我的第一篇博客文章。这里将记录我的学习与生活。
 
 ### 关于这个博客
-
-这里是我的个人空间，用来：
 
 - 📝 记录学习笔记和技术总结
 - 💡 分享编程中的经验和踩坑
@@ -15,11 +24,6 @@
 - **前端**: HTML / CSS / JavaScript / Vue
 - **后端**: Java / Python
 - **工具**: Git / VS Code
-
-### 联系我
-
-- GitHub: [lzh8639-max](https://github.com/lzh8639-max)
-- Email: lzh8639@gmail.com
 
 ---
 

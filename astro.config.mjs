@@ -38,8 +38,17 @@ export default defineConfig({
 		{
 			name: "JetBrains Mono",
 			cssVariable: "--font-jetbrains-mono",
-			provider: fontProviders.fontsource(),
-			styles: ["normal", "italic"],
+			provider: fontProviders.local(),
+			options: {
+				variants: [
+					{
+						src: ["./src/assets/fonts/ZenMaruGothic-Medium.ttf"],
+						weight: "400",
+						style: "normal",
+					},
+				],
+			},
+			fallbacks: ["monospace"],
 		},
 		{
 			name: "ZenMaruGothic-Medium",

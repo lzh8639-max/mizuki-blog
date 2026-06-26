@@ -12,8 +12,8 @@ import TypewriterText from "../../atoms/typewriter-text/TypewriterText.astro";
 	<a
 		aria-label="Go to About Page"
 		href={url("/about/")}
-		class="group block relative mx-auto mt-1 lg:mx-0 lg:mt-0 mb-3
-       max-w-48 lg:max-w-none overflow-hidden rounded-xl active:scale-95"
+		class="group block relative mx-auto mt-1 mb-3
+       max-w-24 lg:max-w-28 overflow-hidden rounded-full active:scale-95"
 	>
 		<div
 			class="absolute transition pointer-events-none group-hover:bg-black/30 group-active:bg-black/50
@@ -27,7 +27,7 @@ import TypewriterText from "../../atoms/typewriter-text/TypewriterText.astro";
 		<Image
 			src={profileConfig.avatar || ""}
 			alt="Profile Image of the Author"
-			class="mx-auto lg:w-full h-full lg:mt-0"
+			class="mx-auto lg:w-full h-full lg:mt-0 rounded-full"
 			loading="eager"
 			fetchpriority="high"
 		/>
