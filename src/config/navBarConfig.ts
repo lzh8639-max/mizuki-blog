@@ -130,6 +130,7 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
+		LinkPreset.Albums,
 		LinkPreset.Anime,
 		LinkPreset.About,
 	],

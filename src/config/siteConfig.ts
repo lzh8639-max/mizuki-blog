@@ -6,14 +6,14 @@ const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 export const siteConfig: SiteConfig = {
 	title: "慕雨棠的博客",
 	subtitle: "记录学习与生活",
-	siteURL: "https://lzh8639-max.github.io/mizuki-blog/", // 请替换为你的站点URL，以斜杠结尾
+	siteURL: "https://mizuki-blog.lzh8639.workers.dev/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2026-04-09", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 345, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: false, // 对访问者隐藏主题色选择器
+		hue: 265, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		fixed: true, // 对访问者隐藏主题色选择器
 	},
 
 	// 特色页面开关配置（关闭未使用的页面有助于提升 SEO，关闭后请记得在 navbarConfig 中移除对应链接）
@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
 		projects: false, // 项目页面开关
 		skills: false, // 技能页面开关
 		timeline: false, // 时间线页面开关
-		albums: false, // 相册页面开关
+		albums: true, // 相册页面开关
 		devices: false, // 设备页面开关
 	},
 
