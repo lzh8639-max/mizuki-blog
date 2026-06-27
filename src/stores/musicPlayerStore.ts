@@ -349,7 +349,7 @@ class MusicPlayerStore {
 	}
 
 	private loadSong(song: Song, autoPlay = true): void {
-		if (!song || !song.url) {
+		if (!song?.url) {
 			return;
 		}
 		if (song.url !== this.state.currentSong.url) {
@@ -404,7 +404,7 @@ class MusicPlayerStore {
 		this.audio.play().catch(() => {});
 	}
 
-		pause(): void {
+	pause(): void {
 		if (!this.audio || !this.state.currentSong.url) {
 			return;
 		}
