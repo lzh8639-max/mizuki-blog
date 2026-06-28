@@ -276,7 +276,7 @@ onDestroy(() => {
 				: ''}"
 		></Icon>
 		<input
-			id="search-input-desktop"
+			id="search-input-desktop" name="search-desktop"
 			placeholder={i18n(I18nKey.search)}
 			bind:value={keywordDesktop}
 			onfocus={() => {
@@ -324,6 +324,7 @@ onDestroy(() => {
 		></Icon>
 		<input
 			placeholder={i18n(I18nKey.search)}
+			id="search-input-mobile" name="search-mobile"
 			bind:value={keywordMobile}
 			class="pl-10 absolute inset-0 text-sm bg-transparent outline-0
                focus:w-60 text-black/50 dark:text-white/50"
