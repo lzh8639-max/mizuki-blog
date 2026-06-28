@@ -147,7 +147,7 @@ const archiveUrl = url("/archive/");
 			bar.getAttribute("data-archive-path") || "/archive"
 		).replace(/\/$/, "");
 		const isHome =
-			pathname === homePath || pathname === "" || pathname === "/";
+			pathname === homePath || pathname === "";
 		const isArchive = pathname === archivePath;
 		// 分页页面（如 /2/, /3/）也属于首页的延续
 		const isHomePagination =

@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components";
 import { navBarConfig, siteConfig } from "../../../config";
 import { LinkPresets } from "../../../constants/link-presets";
 import { LinkPreset, type NavBarLink } from "../../../types/config";
-import { url } from "../../../utils/url-utils";
+import { pathsEqual, url } from "../../../utils/url-utils";
 import ThemeSwitch from "../../control/ThemeSwitch.svelte";
 import SettingsPanel from "../../features/settings/SettingsPanel.svelte";
 import MobileTOC from "../../features/toc/MobileTOC.svelte";
@@ -18,7 +18,7 @@ const className = Astro.props.class;
 const navbarTransparentMode =
 	siteConfig.banner?.navbar?.transparentMode || "semi";
 
-const isHomePage = Astro.url.pathname === "/" || Astro.url.pathname === "";
+const isHomePage = pathsEqual(Astro.url.pathname, url("/"));
 
 // featurePage URL -> config key mapping
 const featurePageUrlMap: Record<string, string> = {
@@ -309,11 +309,11 @@ if (document.readyState === 'loading') {
 }
 </script>
 
-<script is:inline>
+<script is:inline define:vars={{ pagefindBase: `${import.meta.env.BASE_URL}pagefind/pagefind.js` }}>
 window.loadPagefind = async function() {
     if (window.pagefind) {return;}
     try {
-        const scriptUrl = new URL('pagefind/pagefind.js', window.location.origin).href;
+        const scriptUrl = pagefindBase;
         const response = await fetch(scriptUrl, { method: 'HEAD' });
         if (!response.ok) {
             throw new Error(`Pagefind script not found: ${response.status}`);

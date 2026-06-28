@@ -116,7 +116,9 @@ export function generatePostItems(): PostItem[] {
  */
 export function checkIsHomePage(): boolean {
 	const pathname = window.location.pathname;
-	return pathname === "/" || pathname === "" || /^\/\d+\/?$/.test(pathname);
+	const base = import.meta.env.BASE_URL || "/";
+	const baseNoSlash = base.endsWith("/") ? base.slice(0, -1) : base;
+	return pathname === base || pathname === baseNoSlash || pathname === "" || /^\/\d+\/?$/.test(pathname);
 }
 
 /**

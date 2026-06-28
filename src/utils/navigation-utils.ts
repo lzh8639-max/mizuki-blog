@@ -250,7 +250,9 @@ export function getCurrentPath(): string {
  */
 export function isHomePage(): boolean {
 	const path = getCurrentPath();
-	return path === "/" || path === "";
+	const base = import.meta.env.BASE_URL || "/";
+	const baseNoSlash = base.endsWith("/") ? base.slice(0, -1) : base;
+	return path === base || path === baseNoSlash || path === "";
 }
 
 /**
@@ -258,7 +260,8 @@ export function isHomePage(): boolean {
  */
 export function isPostPage(): boolean {
 	const path = getCurrentPath();
-	return path.startsWith("/posts/");
+	const base = import.meta.env.BASE_URL || "/";
+	return path.startsWith(`${base}posts/`) || path.startsWith("/posts/");
 }
 
 /**
