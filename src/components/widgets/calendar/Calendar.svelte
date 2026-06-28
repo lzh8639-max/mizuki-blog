@@ -1,5 +1,6 @@
 <script lang="ts">
 import Icon from "@iconify/svelte";
+import { url } from "@utils/url-utils";
 import { onMount } from "svelte";
 
 let dateCheckInterval: ReturnType<typeof setInterval> | null = null;
@@ -315,7 +316,7 @@ onMount(() => {
 						{@const [, m, d] = post.date.split("-")}
 						{@const dateStr = `${parseInt(m)}-${parseInt(d)}`}
 						<a
-							href="/posts/{post.id}/"
+							href={url(`/posts/${post.id}/`)}
 							class="flex items-center justify-between text-sm transition-colors px-2 py-2 rounded-lg group border border-transparent
 								{isCurrentPost
 								? 'bg-[var(--primary)]/10 text-[var(--primary)] border-[var(--primary)]/10'

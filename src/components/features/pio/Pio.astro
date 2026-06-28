@@ -7,7 +7,9 @@ interface Props {
 
 const { config } = Astro.props;
 
-const modelPaths = config.models ?? ["/pio/models/NOIR/noir.model3.json"];
+const modelPaths = config.models ?? [
+	`${import.meta.env.BASE_URL}pio/models/NOIR/noir.model3.json`,
+];
 const modelConfigs = modelPaths.map((p) => ({ path: p }));
 
 const position = config.position === "right" ? "bottom-right" : "bottom-left";
@@ -60,7 +62,7 @@ const isRight = config.position === "right";
 
 <iframe
 	id="l2d-iframe"
-	src="/pio/live2d-host.html"
+		src={`${import.meta.env.BASE_URL}pio/live2d-host.html`}
 	allowtransparency="true"
 	style={"position: fixed; z-index: 999; pointer-events: none; border: none; bottom: 0;"
 		+ (isRight ? " right: 0;" : " left: 0;")
@@ -104,7 +106,7 @@ const isRight = config.position === "right";
 
 		if (!win.__mizukiPioController) {
 			const menuActions: Record<string, () => void> = {
-				home: () => (window.location.href = "/"),
+				home: () => (window.location.href = `${import.meta.env.BASE_URL}`),
 				scrollToTop: () => window.scrollTo({ top: 0, behavior: "smooth" }),
 			};
 

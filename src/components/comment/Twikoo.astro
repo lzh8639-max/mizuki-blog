@@ -16,10 +16,10 @@ const config = {
 	<div id="tcomment"></div>
 </div>
 
-<script is:inline define:vars={{ config }}>
+<script is:inline define:vars={{ config, twikooBaseUrl: import.meta.env.BASE_URL }}>
 	(function () {
 		const TWIKOO_CONTAINER_ID = "twikoo-container";
-		const TWIKOO_SCRIPT_URL = "/assets/js/twikoo.all.min.js";
+		const TWIKOO_SCRIPT_URL = twikooBaseUrl + "assets/js/twikoo.all.min.js";
 		const ROOT_MARGIN = "200px";
 
 		let observer = null;

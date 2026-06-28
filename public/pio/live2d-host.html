@@ -7,7 +7,16 @@
 </style>
 </head>
 <body>
-<script src="/pio/l2d-widget.min.js"></script>
+<script>
+(function(){
+  var p = window.location.pathname;
+  var idx = p.indexOf('/pio/');
+  var base = idx >= 0 ? p.substring(0, idx + 1) : '/';
+  var s = document.createElement('script');
+  s.src = base + 'pio/l2d-widget.min.js';
+  document.head.appendChild(s);
+})();
+</script>
 <script>
   var widgetInstance = null;
   var activeConfigKey = '';
@@ -53,6 +62,12 @@
     widgetInstance = null;
   }
 
+  function waitForWidget(cb, maxWait) {
+    if (typeof L2D_WIDGET !== 'undefined') return cb();
+    if (maxWait <= 0) return;
+    setTimeout(function() { waitForWidget(cb, maxWait - 200); }, 200);
+  }
+
   window.addEventListener('message', function(e) {
     if (e.data.type !== 'l2d-init') return;
     var config = e.data.config;
@@ -82,41 +97,43 @@
       });
     }
 
-    try {
-      widgetInstance = L2D_WIDGET.createWidget(config);
-      activeConfigKey = configKey;
-    } catch (err) {
-      loadingConfigKey = '';
-      activeConfigKey = '';
-      console.error('Failed to initialize Live2D widget:', err);
-      return;
-    }
-    loadingConfigKey = '';
-
-    if (config._hideAbout) {
-      hideAboutMenu();
-    }
-
-    var notified = false;
-    function notifyOnce() {
-      if (notified) return;
-      notified = true;
-      notifyLoaded();
-    }
-
-    var checkInterval = setInterval(function() {
-      var canvas = document.querySelector('canvas');
-      if (canvas && canvas.width > 0 && canvas.height > 0) {
-        clearInterval(checkInterval);
-        setTimeout(notifyOnce, 300);
+    waitForWidget(function() {
+      try {
+        widgetInstance = L2D_WIDGET.createWidget(config);
+        activeConfigKey = configKey;
+      } catch (err) {
+        loadingConfigKey = '';
+        activeConfigKey = '';
+        console.error('Failed to initialize Live2D widget:', err);
+        return;
       }
-    }, 200);
-
-    setTimeout(function() {
-      clearInterval(checkInterval);
       loadingConfigKey = '';
-      notifyOnce();
-    }, 15000);
+
+      if (config._hideAbout) {
+        hideAboutMenu();
+      }
+
+      var notified = false;
+      function notifyOnce() {
+        if (notified) return;
+        notified = true;
+        notifyLoaded();
+      }
+
+      var checkInterval = setInterval(function() {
+        var canvas = document.querySelector('canvas');
+        if (canvas && canvas.width > 0 && canvas.height > 0) {
+          clearInterval(checkInterval);
+          setTimeout(notifyOnce, 300);
+        }
+      }, 200);
+
+      setTimeout(function() {
+        clearInterval(checkInterval);
+        loadingConfigKey = '';
+        notifyOnce();
+      }, 15000);
+    }, 10000);
   });
 </script>
 </body>
