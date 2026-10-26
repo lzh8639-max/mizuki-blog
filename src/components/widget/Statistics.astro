@@ -1,0 +1,273 @@
+---
+import WidgetLayout from './WidgetLayout.astro'
+import { getSortedPosts } from '../../utils/content-utils'
+import { Icon } from 'astro-icon/components'
+
+function formatTimeAgo(date) {
+    const now = new Date();
+    const diffMs = now - date;
+    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    if (days == 0){
+      return `今天`;
+    }
+    return `${days}天前`;
+}
+
+function formatWordsCount(words) {
+    if (words >= 10000) {
+        return (words / 10000).toFixed(1) + '万';
+    } else if (words >= 1000) {
+        return (words / 1000).toFixed(1) + '千';
+    }
+    return words + '';
+}
+
+// 字数统计方法（支持中英文混排，中文算1字，英文/数字/符号以空格分词）
+function countWords(text = "") {
+    // 统计中文字符
+    const cn = (text.match(/[一-龥]/g) || []).length;
+    // 统计英文单词/数字
+    const en = (text.replace(/[一-龥]/g, '').match(/\b\w+\b/g) || []).length;
+    return cn + en;
+}
+
+// 运营时长计算
+function formatDuration(from, to) {
+    let years = to.getFullYear() - from.getFullYear();
+    let months = to.getMonth() - from.getMonth();
+    if (months < 0) {
+        years -= 1;
+        months += 12;
+    }
+    return `${years}年${months}个月`;
+}
+
+const posts = await getSortedPosts();
+const totalPosts = posts.length + '篇';
+let latestPost = posts[0];
+let totalWords = 0;
+
+for (const post of posts) {
+    totalWords += countWords(post.body || "");
+}
+if (posts.length > 0) {
+    latestPost = posts.reduce((a, b) =>
+        new Date(a.data.published) > new Date(b.data.published) ? a : b
+    );
+}
+const lastUpdate = latestPost ? formatTimeAgo(new Date(latestPost.data.published)) : '无';
+const wordsString = formatWordsCount(totalWords);
+
+const siteStartDate = new Date("2023-04-05");
+const now = new Date();
+const runningDuration = formatDuration(siteStartDate, now);
+---
+
+<WidgetLayout name="状态" id="statistics">
+  <div class="flex flex-col gap-2 ">
+    <!-- 文章总数行 -->
+    <div class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2">
+      <div class="flex items-center">
+        <Icon name="material-symbols:book-2-outline-rounded" class="text-[1.4rem] mr-2" />
+        <span>文章总数</span>
+      </div>
+      <span class="font-semibold text-[var(--primary)]">{totalPosts}</span>
+    </div>
+
+    <!-- 总字数行 -->
+    <div class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2">
+      <div class="flex items-center">
+        <Icon name="material-symbols:match-word-rounded" class="text-[1.4rem] mr-2" />
+        <span>总字数</span>
+      </div>
+      <span class="font-semibold text-[var(--primary)]">{wordsString}</span>
+    </div>
+
+    <!-- 运营时长行 -->
+    <div class="flex items-center justify-between text-neutral-700 dark:text-neutral-300 h-7 pl-2 pr-2 mb-1.5">
+      <div class="flex items-center">
+        <Icon name="material-symbols:calendar-clock-outline-rounded" class="text-[1.4rem] mr-2" />
+        <span>运营时长</span>
+      </div>
+      <span class="font-semibold text-[var(--primary)]">{runningDuration}</span>
+    </div>
+
+    <!-- GitHub 贡献热力图（3 行色块条，无标题/图例/月份/交互） -->
+    <div id="github-heatmap" class="widget-heatmap pl-2 pr-2 pb-1">
+      <div class="hm-status text-xs text-neutral-400">贡献数据加载中…</div>
+    </div>
+  </div>
+</WidgetLayout>
+
+<style is:global>
+  /* 配色跟随 Fuwari 主题：oklch + var(--hue) 直接推导（与 variables.styl 的 --primary 同法），
+     亮暗各一组。注意：不能经中间自定义属性转发——oklch 藏在中间变量里时 hue 变化不会传播到
+     单元格背景（Chromium 失效传播 bug），必须把 oklch(...var(--hue)) 直接写进格子规则 */
+  .widget-heatmap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 色块条水平居中，左右留白对称 */
+  }
+  .widget-heatmap .hm-grid {
+    display: flex;
+    gap: 3px;
+  }
+  .widget-heatmap .hm-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .widget-heatmap .hm-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background: oklch(0.93 0.02 var(--hue, 260));
+  }
+  :root.dark .widget-heatmap .hm-cell {
+    background: oklch(0.30 0.02 var(--hue, 260));
+  }
+  .widget-heatmap .hm-cell.lv1 {
+    background: oklch(0.87 0.06 var(--hue, 260));
+  }
+  :root.dark .widget-heatmap .hm-cell.lv1 {
+    background: oklch(0.42 0.06 var(--hue, 260));
+  }
+  .widget-heatmap .hm-cell.lv2 {
+    background: oklch(0.78 0.10 var(--hue, 260));
+  }
+  :root.dark .widget-heatmap .hm-cell.lv2 {
+    background: oklch(0.52 0.10 var(--hue, 260));
+  }
+  .widget-heatmap .hm-cell.lv3 {
+    background: oklch(0.67 0.14 var(--hue, 260));
+  }
+  :root.dark .widget-heatmap .hm-cell.lv3 {
+    background: oklch(0.62 0.14 var(--hue, 260));
+  }
+  .widget-heatmap .hm-cell.lv4 {
+    background: oklch(0.55 0.16 var(--hue, 260));
+  }
+  :root.dark .widget-heatmap .hm-cell.lv4 {
+    background: oklch(0.72 0.16 var(--hue, 260));
+  }
+</style>
+
+<script>
+  const HEATMAP_ID = 'github-heatmap'
+  // 同源快照优先（构建时抓取，访客不翻墙也能加载）；回退 raw.githubusercontent.com（翻墙/实时）
+  const SOURCES = [
+    '/data/github-contributions.json',
+    'https://raw.githubusercontent.com/lzh8639-max/github-contributions/main/data.json',
+  ]
+  const ROWS = 3
+  const CELL = 12
+  const GAP = 3
+  const TIMEOUT = 8000 // 单个源最长等待，避免「加载中」长时间悬挂
+
+  const el = document.getElementById(HEATMAP_ID)
+  if (!el) throw new Error('[github-heatmap] container missing')
+
+  const fmt = (d) =>
+    d.getFullYear() +
+    '-' +
+    String(d.getMonth() + 1).padStart(2, '0') +
+    '-' +
+    String(d.getDate()).padStart(2, '0')
+
+  let loading = false
+
+  // 全部源失败时整体隐藏热力图：无痕、不显示假数据（不误导访客以为近期无贡献）
+  function hide() {
+    el.style.display = 'none'
+  }
+
+  async function tryFetch(url) {
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), TIMEOUT)
+    try {
+      const res = await fetch(url + '?t=' + Date.now(), { signal: controller.signal })
+      if (!res.ok) throw new Error('HTTP ' + res.status)
+      const data = await res.json()
+      if (!data || !Array.isArray(data.contributions)) throw new Error('bad data shape')
+      return data
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
+  async function load() {
+    if (loading) return
+    loading = true
+    try {
+      for (const url of SOURCES) {
+        try {
+          render(await tryFetch(url))
+          return
+        } catch (e) {
+          console.warn('[github-heatmap] 源不可用:', url, e)
+        }
+      }
+      hide()
+    } finally {
+      loading = false
+    }
+  }
+
+  function render(data) {
+    const byDate = new Map()
+    for (const d of data.contributions) byDate.set(d.date, d.count || 0)
+
+    // 3 行固定 12px 格子：列数取侧栏可用宽度能放下的最大值，窗口天数随之收缩
+    const avail = Math.max(60, el.clientWidth - 16) // pl-2 pr-2 = 各 8px
+    const cols = Math.max(1, Math.floor((avail + GAP) / (CELL + GAP)))
+    const total = cols * ROWS
+
+    // 窗口：今天往前 total 天（列优先：第 1 列最早 3 天，最后一列最近 3 天）
+    const today = new Date()
+    const days = []
+    for (let i = total - 1; i >= 0; i--) {
+      const d = new Date(today)
+      d.setDate(d.getDate() - i)
+      days.push(fmt(d))
+    }
+
+    // 强度分档：按窗口内非零贡献数分位数分 4 档（GitHub 同款逻辑）
+    const nonZero = [...new Set(days.map((d) => byDate.get(d) || 0).filter((c) => c > 0))].sort(
+      (a, b) => a - b,
+    )
+    const level = (c) => {
+      if (c <= 0) return 0
+      const q1 = nonZero[Math.floor(nonZero.length * 0.25)] ?? c
+      const q2 = nonZero[Math.floor(nonZero.length * 0.5)] ?? c
+      const q3 = nonZero[Math.floor(nonZero.length * 0.75)] ?? c
+      if (c <= q1) return 1
+      if (c <= q2) return 2
+      if (c <= q3) return 3
+      return 4
+    }
+
+    el.innerHTML = ''
+    const grid = document.createElement('div')
+    grid.className = 'hm-grid'
+    for (let c = 0; c < cols; c++) {
+      const col = document.createElement('div')
+      col.className = 'hm-col'
+      for (let r = 0; r < ROWS; r++) {
+        const date = days[c * ROWS + r]
+        const count = byDate.get(date) || 0
+        const cell = document.createElement('div')
+        cell.className = 'hm-cell lv' + level(count)
+        col.appendChild(cell)
+      }
+      grid.appendChild(col)
+    }
+    el.appendChild(grid)
+  }
+
+  load()
+  // 回到页面时刷新（侧栏在 swup main 容器外，跨导航持久存在，不会重复初始化）
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') load()
+  })
+</script>

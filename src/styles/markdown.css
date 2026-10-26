@@ -1,0 +1,153 @@
+.custom-md {
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply mt-10 mb-4;
+    }
+
+    h3 {
+        @apply mt-8 mb-3;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        .anchor {
+            @apply transition -m-0.5 ml-[0.2ch] p-0.5 select-none opacity-0 no-underline !important;
+
+            .anchor-icon {
+                @apply mx-[0.45ch] !important;
+            }
+        }
+
+        &:hover {
+            .anchor {
+                @apply opacity-100 !important;
+            }
+        }
+    }
+
+    a:not(.no-styling) {
+        @apply relative bg-none font-medium text-[var(--primary)] rounded-md p-1 -m-1 z-0
+        underline decoration-[var(--link-underline)] decoration-1 decoration-dashed underline-offset-4
+        before:ease-out before:transition before:absolute before:rounded-[inherit] before:inset-0 before:scale-[0.85] before:-z-10
+        hover:before:scale-100 hover:before:bg-[var(--btn-plain-bg-hover)] active:before:bg-[var(--btn-plain-bg-active)];
+
+        &:hover, &:active {
+            @apply decoration-transparent;
+        }
+    }
+
+    code {
+        @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] px-1 py-0.5 rounded-md overflow-hidden;
+
+        font-family: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        &:before {
+            content:none;
+        }
+        &:after {
+            content:none;
+        }
+
+        counter-reset: line;
+        span.line {
+            &:before {
+                @apply text-white/25 mr-4 w-4 inline-block;
+                content: counter(line);
+                counter-increment: line;
+                direction: rtl;
+            }
+            &:last-child:empty, &:last-child:has(> span:empty:only-child) {
+                display: none;
+            }
+        }
+    }
+
+    pre {
+        @apply bg-[var(--codeblock-bg)] !important;
+        @apply rounded-xl px-5;
+        transition: max-height 0.15s ease;
+
+        code {
+            @apply bg-transparent text-inherit text-sm p-0;
+
+            ::selection {
+                @apply bg-[var(--codeblock-selection)];
+            }
+        }
+    }
+
+    .code-block.collapsed pre {
+        overflow: clip !important;
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        code {
+            overflow: clip !important;
+        }
+
+        /* OverlayScrollbars 把滚动搬到内层 viewport，必须一并 clip 才真正不接受滚动 */
+        [data-overlayscrollbars-viewport] {
+            overflow: clip !important;
+        }
+    }
+
+    .code-block.collapsed .fold-btn .expand-icon {
+        display: inline;
+    }
+    .code-block.collapsed .fold-btn .collapse-icon {
+        display: none;
+    }
+    .code-block:not(.collapsed) .fold-btn .expand-icon {
+        display: none;
+    }
+    .code-block:not(.collapsed) .fold-btn .collapse-icon {
+        display: inline;
+    }
+
+    .fold-btn {
+        @apply text-white/70;
+        svg {
+            @apply w-5 h-5;
+        }
+    }
+
+    ul, ol {
+        li::marker {
+            @apply text-[var(--primary)];
+        }
+    }
+
+    /* 脚注区：remark-gfm 在文末生成 <section data-footnotes class="footnotes">，
+       原本没有任何样式，和正文黏在一起、看不出边界。这里补一条分割线。
+       标题是 sr-only 的（只给目录用），所以线画在 section 自己的上边框上。 */
+    .footnotes {
+        @apply mt-12 pt-5;
+        border-top: 1px dashed var(--line-divider);
+
+        ol {
+            @apply mt-0;
+        }
+
+        li {
+            @apply text-sm;
+        }
+    }
+
+    blockquote {
+        @apply not-italic border-transparent relative;
+        font-weight: inherit;
+
+        &:before {
+            @apply content-[''] absolute -left-1 block transition bg-[var(--btn-regular-bg)] h-full w-1 rounded-full;
+        }
+
+        /* Remove the double quotes from default styles */
+        p:before, p:after {
+            @apply content-none;
+        }
+
+    }
+}
