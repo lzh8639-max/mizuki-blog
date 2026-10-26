@@ -13,13 +13,13 @@ export async function GET(context: APIContext) {
   return rss({
     title: siteConfig.title,
     description: siteConfig.subtitle || 'No description',
-    site: context.site ?? 'https://fuwari.vercel.app',
+    site: new URL(import.meta.env.BASE_URL, context.site ?? 'https://fuwari.vercel.app/').href,
     items: blog.map(post => {
       return {
         title: post.data.title,
         pubDate: post.data.published,
         description: post.data.description || '',
-        link: `/posts/${post.slug}/`,
+        link: `${import.meta.env.BASE_URL}posts/${post.slug}/`,
         content: sanitizeHtml(parser.render(post.body), {
           allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
         }),

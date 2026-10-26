@@ -1,13 +1,15 @@
 ---
 import Markdown from "@components/misc/Markdown.astro";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { url } from "../utils/url-utils";
 ---
 
 <script>
   // 将早期的页面重定向到 /posts
-  if (!window.location.pathname.startsWith("/posts")) {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  if (!window.location.pathname.startsWith(base + "/posts")) {
     // 获取 /posts + 当前页面的 URL 是否存在
-    const linkWithPostPrefix = await fetch("/posts" + window.location.pathname);
+    const linkWithPostPrefix = await fetch(base + "/posts" + window.location.pathname.slice(base.length));
     // 如果存在，则跳转
     if (linkWithPostPrefix.ok) {
       window.location.href = linkWithPostPrefix.url;
@@ -27,7 +29,7 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
         <p>迷途是探索的序章，让我们为你点亮归航的微光：</p>
       </Markdown>
       <a
-        href="/"
+        href={url("/")}
         class="btn-regular scale-animation rounded-lg h-[3.25rem] px-5 font-bold active:scale-95"
         ><div class="text-[var(--primary)]">返回首页</div></a
       >

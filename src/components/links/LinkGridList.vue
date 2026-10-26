@@ -28,7 +28,7 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
   {
     title: "慕雨棠的博客",
     link: "https://lzh8639-max.github.io/mizuki-blog/",
-    img: "/favicon/logo.jpg",
+    img: `${import.meta.env.BASE_URL}favicon/logo.jpg`,
     desc: "记录学习与生活",
   },
   // 按上面同样的格式追加友链即可

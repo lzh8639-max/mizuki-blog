@@ -30,9 +30,10 @@ import vue from '@astrojs/vue'
 
 // https://astro.build/config
 export default defineConfig({
-  // 本地开发用根路径；将来部署到 GitHub Pages 子路径时把 base 改成 '/mizuki-blog/'
-  site: 'https://lzh8639-max.github.io/mizuki-blog/',
-  base: '/',
+  // GitHub Pages 项目站点：站点地址是 https://lzh8639-max.github.io/mizuki-blog/
+  // 所以 site 只写域名，base 写子路径（页面内所有链接通过 url() 自动加前缀）
+  site: 'https://lzh8639-max.github.io',
+  base: '/mizuki-blog/',
   trailingSlash: 'ignore',
   output: 'static',
   integrations: [
