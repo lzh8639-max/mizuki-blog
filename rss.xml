@@ -1,1027 +1,468 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>慕雨棠的博客</title><description>记录学习与生活</description><link>https://lzh8639-max.github.io/mizuki-blog/</link><language>zh_CN</language><item><title>Markdown Tutorial</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/markdown-tutorial/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/markdown-tutorial/</guid><description>A simple example of a Markdown blog post.</description><pubDate>Mon, 20 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Markdown Tutorial&lt;/h1&gt;
-&lt;p&gt;A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>慕雨棠的博客</title><description>记录学习与生活</description><link>https://lzh8639-max.github.io/mizuki-blog/</link><language>zh_CN</language><item><title>你好，世界</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/hello-world/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/hello-world/</guid><description>新博客的第一篇文章，写在一切开始之前。</description><pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这是这个博客的第一篇文章。&lt;/p&gt;
+&lt;p&gt;搬过几次家之后，我决定把痕迹留在一个自己能控制的地方。这里不会有宏大的宣言，只有一些慢慢写下来的东西：学到的知识、踩过的坑、偶尔冒出来的想法。&lt;/p&gt;
+&lt;h2&gt;这里会写什么&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#block-elements&quot;&gt;Block Elements&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#paragraphs-and-line-breaks&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#headers&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#lists&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#code-blocks&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#horizontal-rules&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#table&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;学习笔记&lt;/strong&gt;：把学过的东西讲清楚，顺便检验自己是不是真的懂了&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;折腾记录&lt;/strong&gt;：配置、工具、踩坑，以及最后是怎么解决的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生活碎片&lt;/strong&gt;：不一定有用，但想让它们留下来&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#span-elements&quot;&gt;Span Elements&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#links&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#emphasis&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#images&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#strikethrough&quot;&gt;Strikethrough&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#miscellaneous&quot;&gt;Miscellaneous&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#automatic-links&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#backslash-escapes&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#inline-html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Block Elements&lt;/h2&gt;
-&lt;h3&gt;Paragraphs and Line Breaks&lt;/h3&gt;
-&lt;h4&gt;Paragraphs&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;One or more blank lines. (A blank line is a line containing nothing but &lt;strong&gt;spaces&lt;/strong&gt; or &lt;strong&gt;tabs&lt;/strong&gt; is considered blank.)&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This will be
-inline.
-
-This is second paragraph.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This will be
-inline.&lt;/p&gt;
-&lt;p&gt;This is second paragraph.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Line Breaks&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;End a line with &lt;strong&gt;two or more spaces&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This will be not
-inline.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This will be not&lt;br /&gt;
-inline.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Headers&lt;/h3&gt;
-&lt;p&gt;Markdown supports two styles of headers, Setext and atx.&lt;/p&gt;
-&lt;h4&gt;Setext&lt;/h4&gt;
-&lt;p&gt;HTML Tags: &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&quot;Underlined&quot; using &lt;strong&gt;equal signs (=)&lt;/strong&gt; as &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; and &lt;strong&gt;dashes (-)&lt;/strong&gt; as &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; in any number.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is an H1
-=============
-This is an H2
--------------
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;h4&gt;atx&lt;/h4&gt;
-&lt;p&gt;HTML Tags: &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h4&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h5&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Uses 1-6 &lt;strong&gt;hash characters (#)&lt;/strong&gt; at the start of the line, corresponding to &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# This is an H1
-## This is an H2
-###### This is an H6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-&lt;h6&gt;This is an H6&lt;/h6&gt;
-&lt;hr /&gt;
-&lt;p&gt;Optionally, you may &quot;close&quot; atx-style headers. The closing hashes &lt;strong&gt;don&apos;t need to match&lt;/strong&gt; the number of hashes used to open the header.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# This is an H1 #
-## This is an H2 ##
-### This is an H3 ######
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1&gt;This is an H1&lt;/h1&gt;
-&lt;h2&gt;This is an H2&lt;/h2&gt;
-&lt;h3&gt;This is an H3&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Blockquotes&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown uses email-style &lt;strong&gt;&amp;gt;&lt;/strong&gt; characters for blockquoting. It looks best if you hard wrap the text and put a &amp;gt; before every line.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-&amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-&amp;gt;
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&amp;gt; id sem consectetuer libero luctus adipiscing.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;p&gt;Markdown allows you to be lazy and only put the &amp;gt; before the first line of a hard-wrapped paragraph.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;p&gt;Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of &amp;gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is the first level of quoting.
-&amp;gt;
-&amp;gt; &amp;gt; This is nested blockquote.
-&amp;gt;
-&amp;gt; Back to the first level.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is nested blockquote.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Back to the first level.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;p&gt;Blockquotes can contain other Markdown elements, including headers, lists, and code blocks.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; ## This is a header.
-&amp;gt;
-&amp;gt; 1.   This is the first list item.
-&amp;gt; 2.   This is the second list item.
-&amp;gt;
-&amp;gt; Here&apos;s some example code:
-&amp;gt;
-&amp;gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;This is the first list item.&lt;/li&gt;
-&lt;li&gt;This is the second list item.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Here&apos;s some example code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;return shell_exec(&quot;echo $input | $markdown_script&quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Lists&lt;/h3&gt;
-&lt;p&gt;Markdown supports ordered (numbered) and unordered (bulleted) lists.&lt;/p&gt;
-&lt;h4&gt;Unordered&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Unordered lists use &lt;strong&gt;asterisks (*)&lt;/strong&gt;, &lt;strong&gt;pluses (+)&lt;/strong&gt;, and &lt;strong&gt;hyphens (-)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*   Red
-*   Green
-*   Blue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;is equivalent to:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+   Red
-+   Green
-+   Blue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-   Red
--   Green
--   Blue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;Ordered&lt;/h4&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Ordered lists use numbers followed by periods:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.  Bird
-2.  McHale
-3.  Parish
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;Bird&lt;/li&gt;
-&lt;li&gt;McHale&lt;/li&gt;
-&lt;li&gt;Parish&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;p&gt;It&apos;s possible to trigger an ordered list by accident, by writing something like this:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1986. What a great season.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;What a great season.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;p&gt;You can &lt;strong&gt;backslash-escape (\)&lt;/strong&gt; the period:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1986\. What a great season.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;1986. What a great season.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Indented&lt;/h4&gt;
-&lt;h5&gt;Blockquote&lt;/h5&gt;
-&lt;p&gt;To put a blockquote within a list item, the blockquote&apos;s &amp;gt; delimiters need to be indented:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*   A list item with a blockquote:
-
-    &amp;gt; This is a blockquote
-    &amp;gt; inside a list item.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;A list item with a blockquote:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote
-inside a list item.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h5&gt;Code Block&lt;/h5&gt;
-&lt;p&gt;To put a code block within a list item, the code block needs to be indented twice — &lt;strong&gt;8 spaces&lt;/strong&gt; or &lt;strong&gt;two tabs&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*   A list item with a code block:
-
-        &amp;lt;code goes here&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;A list item with a code block:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;code goes here&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h5&gt;Nested List&lt;/h5&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;* A
-  * A1
-  * A2
-* B
-* C
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-&lt;li&gt;A
-&lt;ul&gt;
-&lt;li&gt;A1&lt;/li&gt;
-&lt;li&gt;A2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;B&lt;/li&gt;
-&lt;li&gt;C&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Code Blocks&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Indent every line of the block by at least &lt;strong&gt;4 spaces&lt;/strong&gt; or &lt;strong&gt;1 tab&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is a normal paragraph:
-
-    This is a code block.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is a code block.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;p&gt;A code block continues until it reaches a line that is not indented (or the end of the article).&lt;/p&gt;
-&lt;p&gt;Within a code block, &lt;strong&gt;&lt;em&gt;ampersands (&amp;amp;)&lt;/em&gt;&lt;/strong&gt; and angle &lt;strong&gt;brackets (&amp;lt; and &amp;gt;)&lt;/strong&gt; are automatically converted into HTML entities.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;div class=&quot;footer&quot;&amp;gt;
-        &amp;amp;copy; 2004 Foo Corporation
-    &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;footer&quot;&amp;gt;
-    &amp;amp;copy; 2004 Foo Corporation
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;p&gt;Following sections Fenced Code Blocks and Syntax Highlighting are extensions, you can use the other way to write the code block.&lt;/p&gt;
-&lt;h4&gt;Fenced Code Blocks&lt;/h4&gt;
-&lt;p&gt;Just wrap your code in &lt;code&gt;```&lt;/code&gt; (as shown below) and you won&apos;t need to indent it by four spaces.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Here&apos;s an example:
-
-```
-function test() {
-  console.log(&quot;notice the blank line before this function?&quot;);
-}
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Here&apos;s an example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function test() {
-  console.log(&quot;notice the blank line before this function?&quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Syntax Highlighting&lt;/h4&gt;
-&lt;p&gt;In your fenced block, add an optional language identifier and we&apos;ll run it through syntax highlighting (&lt;a href=&quot;https://github.com/github/linguist/blob/master/lib/linguist/languages.yml&quot;&gt;Support Languages&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```ruby
-require &apos;redcarpet&apos;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;pre&gt;&lt;code&gt;require &apos;redcarpet&apos;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Horizontal Rules&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;hr /&amp;gt;&lt;/code&gt;
-Places &lt;strong&gt;three or more hyphens (-), asterisks (*), or underscores (_)&lt;/strong&gt; on a line by themselves. You may use spaces between the hyphens or asterisks.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;* * *
-***
-*****
-- - -
----------------------------------------
-___
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Table&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;It&apos;s an extension.&lt;/p&gt;
-&lt;p&gt;Separates column by &lt;strong&gt;pipe (|)&lt;/strong&gt; and header by &lt;strong&gt;dashes (-)&lt;/strong&gt;, and uses &lt;strong&gt;colon (:)&lt;/strong&gt; for alignment.&lt;/p&gt;
-&lt;p&gt;The outer &lt;strong&gt;pipes (|)&lt;/strong&gt; and alignment are optional. There are &lt;strong&gt;3 delimiters&lt;/strong&gt; each cell at least for separating header.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;| Left | Center | Right |
-|:-----|:------:|------:|
-|aaa   |bbb     |ccc    |
-|ddd   |eee     |fff    |
-
- A | B
----|---
-123|456
-
-
-A |B
---|--
-12|45
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Left&lt;/th&gt;
-&lt;th&gt;Center&lt;/th&gt;
-&lt;th&gt;Right&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;aaa&lt;/td&gt;
-&lt;td&gt;bbb&lt;/td&gt;
-&lt;td&gt;ccc&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ddd&lt;/td&gt;
-&lt;td&gt;eee&lt;/td&gt;
-&lt;td&gt;fff&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;A&lt;/th&gt;
-&lt;th&gt;B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;123&lt;/td&gt;
-&lt;td&gt;456&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;A&lt;/th&gt;
-&lt;th&gt;B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Span Elements&lt;/h2&gt;
-&lt;h3&gt;Links&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown supports two style of links: inline and reference.&lt;/p&gt;
-&lt;h4&gt;Inline&lt;/h4&gt;
-&lt;p&gt;Inline link format like this: &lt;code&gt;[Link Text](URL &quot;Title&quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Title is optional.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is [an example](http://example.com/ &quot;Title&quot;) inline link.
-
-[This link](http://example.net/) has no title attribute.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot;&gt;an example&lt;/a&gt; inline link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;If you&apos;re referring to a local resource on the same server, you can use relative paths:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;See my [About](/about/) page for details.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;See my &lt;a href=&quot;/about/&quot;&gt;About&lt;/a&gt; page for details.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h4&gt;Reference&lt;/h4&gt;
-&lt;p&gt;You could predefine link references. Format like this: &lt;code&gt;[id]: URL &quot;Title&quot;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Title is also optional. And the you refer the link, format like this: &lt;code&gt;[Link Text][id]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[id]: http://example.com/  &quot;Optional Title Here&quot;
-This is [an example][id] reference-style link.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;That is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Square brackets containing the link identifier (&lt;strong&gt;not case sensitive&lt;/strong&gt;, optionally indented from the left margin using up to three spaces);&lt;/li&gt;
-&lt;li&gt;followed by a colon;&lt;/li&gt;
-&lt;li&gt;followed by one or more spaces (or tabs);&lt;/li&gt;
-&lt;li&gt;followed by the URL for the link;&lt;/li&gt;
-&lt;li&gt;The link URL may, optionally, be surrounded by angle brackets.&lt;/li&gt;
-&lt;li&gt;optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The following three link definitions are equivalent:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[foo]: http://example.com/  &quot;Optional Title Here&quot;
-[foo]: http://example.com/  &apos;Optional Title Here&apos;
-[foo]: http://example.com/  (Optional Title Here)
-[foo]: &amp;lt;http://example.com/&amp;gt;  &quot;Optional Title Here&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Uses an empty set of square brackets, the link text itself is used as the name.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Google]: http://google.com/
-[Google][]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;a href=&quot;http://google.com/&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Emphasis&lt;/h3&gt;
-&lt;p&gt;HTML Tags: &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown treats &lt;strong&gt;asterisks (*)&lt;/strong&gt; and &lt;strong&gt;underscores (_)&lt;/strong&gt; as indicators of emphasis. &lt;strong&gt;One delimiter&lt;/strong&gt; will be &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;; *&lt;em&gt;double delimiters&lt;/em&gt; will be &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;But if you surround an * or _ with spaces, it&apos;ll be treated as a literal asterisk or underscore.&lt;/p&gt;
-&lt;p&gt;You can backslash escape it:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\*this text is surrounded by literal asterisks\*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;*this text is surrounded by literal asterisks*&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Code&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Wraps it with &lt;strong&gt;backtick quotes (`)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Use the `printf()` function.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;To include a literal backtick character within a code span, you can use &lt;strong&gt;multiple backticks&lt;/strong&gt; as the opening and closing delimiters:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;``There is a literal backtick (`) here.``
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;The backtick delimiters surrounding a code span may include spaces — one after the opening, one before the closing. This allows you to place literal backtick characters at the beginning or end of a code span:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;A single backtick in a code span: `` ` ``
-
-A backtick-delimited string in a code span: `` `foo` ``
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Images&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;img /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference.&lt;/p&gt;
-&lt;h4&gt;Inline&lt;/h4&gt;
-&lt;p&gt;Inline image syntax looks like this: &lt;code&gt;![Alt text](URL &quot;Title&quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Title is optional.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;![Alt text](/path/to/img.jpg)
-
-![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;That is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An exclamation mark: !;&lt;/li&gt;
-&lt;li&gt;followed by a set of square brackets, containing the alt attribute text for the image;&lt;/li&gt;
-&lt;li&gt;followed by a set of parentheses, containing the URL or path to the image, and an optional title attribute enclosed in double or single quotes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Reference&lt;/h4&gt;
-&lt;p&gt;Reference-style image syntax looks like this: &lt;code&gt;![Alt text][id]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[img id]: https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp  &quot;Optional title attribute&quot;
-![Alt text][img id]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/08/20/5fszgXeOxmL3Wdv.webp&quot; alt=&quot;Alt text&quot; title=&quot;Optional title attribute&quot; /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Strikethrough&lt;/h3&gt;
-&lt;p&gt;HTML Tag: &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;It&apos;s an extension.&lt;/p&gt;
-&lt;p&gt;GFM adds syntax to strikethrough text.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~~Mistaken text.~~
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;s&gt;Mistaken text.&lt;/s&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Miscellaneous&lt;/h2&gt;
-&lt;h3&gt;Automatic Links&lt;/h3&gt;
-&lt;p&gt;Markdown supports a shortcut style for creating &quot;automatic&quot; links for URLs and email addresses: simply surround the URL or email address with angle brackets.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;http://example.com/&amp;gt;
-
-&amp;lt;address@example.com&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;mailto:address@example.com&quot;&gt;address@example.com&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;GFM will autolink standard URLs.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/emn178/markdown
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;https://github.com/emn178/markdown&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Backslash Escapes&lt;/h3&gt;
-&lt;p&gt;Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown&apos;s formatting syntax.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\*literal asterisks\*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;*literal asterisks*&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Markdown provides backslash escapes for the following characters:&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Inline HTML&lt;/h2&gt;
-&lt;p&gt;For any markup that is not covered by Markdown&apos;s syntax, you simply use HTML itself. There&apos;s no need to preface it or delimit it to indicate that you&apos;re switching from Markdown to HTML; you just use the tags.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;This is a regular paragraph.
-
-&amp;lt;table&amp;gt;
-    &amp;lt;tr&amp;gt;
-        &amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;
-
-This is another regular paragraph.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
-&lt;p&gt;&amp;lt;table&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;&lt;/p&gt;
-&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Note that Markdown formatting syntax is &lt;strong&gt;not processed within block-level HTML tags&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Unlike block-level HTML tags, Markdown syntax is &lt;strong&gt;processed within span-level tags&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;**Work**&amp;lt;/span&amp;gt;
-
-&amp;lt;div&amp;gt;
-    **No Work**
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Preview:&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&amp;lt;span&amp;gt;&lt;strong&gt;Work&lt;/strong&gt;&amp;lt;/span&amp;gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;div&amp;gt;
-&lt;strong&gt;No Work&lt;/strong&gt;
-&amp;lt;/div&amp;gt;&lt;/p&gt;
-&lt;hr /&gt;
-</content:encoded></item><item><title>Hello World</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/hello-world/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/hello-world/</guid><description>我的第一篇博客文章</description><pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;欢迎来到我的博客&lt;/h2&gt;
-&lt;p&gt;这是我的第一篇博客文章。这里将记录我的学习与生活。&lt;/p&gt;
-&lt;h3&gt;关于这个博客&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;📝 记录学习笔记和技术总结&lt;/li&gt;
-&lt;li&gt;💡 分享编程中的经验和踩坑&lt;/li&gt;
-&lt;li&gt;🌱 记录生活中的点滴&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;技术栈&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;前端&lt;/strong&gt;: HTML / CSS / JavaScript / Vue&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;后端&lt;/strong&gt;: Java / Python&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;: Git / VS Code&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;持续学习，认真生活 ✨&lt;/p&gt;
-&lt;/blockquote&gt;
-</content:encoded></item><item><title>Markdown Extended Features</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/markdown-extended/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/markdown-extended/</guid><description>Read more about Markdown features in Mizuki</description><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;GitHub Repository Cards&lt;/h2&gt;
-&lt;p&gt;You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API.&lt;/p&gt;
-&lt;p&gt;::github{repo=&quot;LyraVoid/Mizuki&quot;}&lt;/p&gt;
-&lt;p&gt;Create a GitHub repository card with the code &lt;code&gt;::github{repo=&quot;LyraVoid/Mizuki&quot;}&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;::github{repo=&quot;LyraVoid/Mizuki&quot;}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Admonitions&lt;/h2&gt;
-&lt;p&gt;Following types of admonitions are supported: &lt;code&gt;note&lt;/code&gt; &lt;code&gt;tip&lt;/code&gt; &lt;code&gt;important&lt;/code&gt; &lt;code&gt;warning&lt;/code&gt; &lt;code&gt;caution&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;:::note
-Highlights information that users should take into account, even when skimming.
-:::&lt;/p&gt;
-&lt;p&gt;:::tip
-Optional information to help a user be more successful.
-:::&lt;/p&gt;
-&lt;p&gt;:::important
-Crucial information necessary for users to succeed.
-:::&lt;/p&gt;
-&lt;p&gt;:::warning
-Critical content demanding immediate user attention due to potential risks.
-:::&lt;/p&gt;
-&lt;p&gt;:::caution
-Negative potential consequences of an action.
-:::&lt;/p&gt;
-&lt;h3&gt;Basic Syntax&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Custom Titles&lt;/h3&gt;
-&lt;p&gt;The title of the admonition can be customized.&lt;/p&gt;
-&lt;p&gt;:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;GitHub Syntax&lt;/h3&gt;
+&lt;h2&gt;关于更新&lt;/h2&gt;
+&lt;p&gt;不承诺频率。想写的时候写，写不动的时候就不写。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!TIP]
-&lt;a href=&quot;https://github.com/orgs/community/discussions/16925&quot;&gt;The GitHub syntax&lt;/a&gt; is also supported.&lt;/p&gt;
+如果你只是想随便看看，导航栏右侧的搜索按钮可以直接搜站内所有文章。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; [!NOTE]
-&amp;gt; The GitHub syntax is also supported.
-
-&amp;gt; [!TIP]
-&amp;gt; The GitHub syntax is also supported.
+&lt;p&gt;先从一小步开始吧。&lt;/p&gt;
+</content:encoded></item><item><title>本站使用指南</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/site-guide/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/site-guide/</guid><description>这个博客有哪些功能，以及怎么用起来更顺手。</description><pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;第一次来可能会觉得页面元素有点多，这篇简单说明一下每个地方是干什么的。&lt;/p&gt;
+&lt;h2&gt;顶部导航&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主页&lt;/strong&gt;：按时间倒序的文章列表，支持分页&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;归档&lt;/strong&gt;：所有文章按时间排列，也可以按分类和标签筛选&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关于&lt;/strong&gt;：关于我和这个站点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;友链&lt;/strong&gt;：交换友链的地方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;搜索&lt;/h2&gt;
+&lt;p&gt;点开导航栏的搜索按钮，可以搜索全站内容。搜索索引由 Pagefind 在构建时生成本地文件，&lt;strong&gt;不需要联网请求服务器&lt;/strong&gt;，所以速度很快，也不会把你的搜索词发给任何第三方。&lt;/p&gt;
+&lt;h2&gt;文章内&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;有目录的文章，右侧会自动生成目录，跟随滚动高亮当前小节&lt;/li&gt;
+&lt;li&gt;代码块按语言着色&lt;/li&gt;
+&lt;li&gt;文末有「最后更新于」、上一篇 / 下一篇和许可信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;阅读偏好&lt;/h2&gt;
+&lt;p&gt;右上角的按钮可以在浅色、深色和跟随系统之间切换。你的选择会存在浏览器的 localStorage 里，下次打开还会保持。&lt;/p&gt;
+&lt;h2&gt;订阅&lt;/h2&gt;
+&lt;p&gt;如果不想错过更新，可以直接订阅 &lt;a href=&quot;/rss.xml&quot;&gt;RSS&lt;/a&gt;。把链接丢进任意 RSS 阅读器即可。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;如果哪里用起来别扭，欢迎通过&lt;a href=&quot;/about/&quot;&gt;关于&lt;/a&gt;页里的联系方式告诉我。&lt;/p&gt;
+</content:encoded></item><item><title>流程图、时序图与甘特图</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/mermaid-guide/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/mermaid-guide/</guid><description>用 Mermaid 在文章里直接画图，不用另存图片。</description><pubDate>Sat, 24 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;写架构、写流程、写排期，最烦的是画完图还要导出一张 png 再传上来，图一改就得重来一遍。&lt;/p&gt;
+&lt;p&gt;本站接了 &lt;a href=&quot;https://mermaid.js.org/&quot;&gt;Mermaid&lt;/a&gt;，直接在代码块里写图，构建时渲染成 SVG——图就是文本，改起来和改错别字一样快。&lt;/p&gt;
+&lt;h2&gt;流程图&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+flowchart TD
+  A[打开文章] --&amp;gt; B{看得懂吗}
+  B -- 看得懂 --&amp;gt; C[点个赞]
+  B -- 看不懂 --&amp;gt; D[查文档]
+  D --&amp;gt; A
+```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Spoiler&lt;/h3&gt;
-&lt;p&gt;You can add spoilers to your text. The text also supports &lt;strong&gt;Markdown&lt;/strong&gt; syntax.&lt;/p&gt;
-&lt;p&gt;The content :spoiler[is hidden &lt;strong&gt;ayyy&lt;/strong&gt;]!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;The content :spoiler[is hidden **ayyy**]!&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Simple Guides for Mizuki</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/guide/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/guide/</guid><description>How to use this blog template.</description><pubDate>Mon, 01 Apr 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This blog template is built with &lt;a href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt;. For the things that are not mentioned in this guide, you may find the answers in the &lt;a href=&quot;https://docs.astro.build/&quot;&gt;Astro Docs&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Front-matter of Posts&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;flowchart TD
+  A[打开文章] --&amp;gt; B{看得懂吗}
+  B -- 看得懂 --&amp;gt; C[点个赞]
+  B -- 看不懂 --&amp;gt; D[查文档]
+  D --&amp;gt; A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;flowchart&lt;/code&gt; 后面的 &lt;code&gt;TD&lt;/code&gt; 是方向：&lt;code&gt;TD&lt;/code&gt; 从上到下、&lt;code&gt;LR&lt;/code&gt; 从左到右、&lt;code&gt;BT&lt;/code&gt;、&lt;code&gt;RL&lt;/code&gt; 同理。&lt;/p&gt;
+&lt;h2&gt;时序图&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+  participant U as 浏览器
+  participant S as 静态站点
+  U-&amp;gt;&amp;gt;S: GET /posts/xxx/
+  S--&amp;gt;&amp;gt;U: HTML + CSS + JS
+  U-&amp;gt;&amp;gt;U: 渲染页面
+  Note over U,S: 没有后端，全靠构建产物
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sequenceDiagram
+  participant U as 浏览器
+  participant S as 静态站点
+  U-&amp;gt;&amp;gt;S: GET /posts/xxx/
+  S--&amp;gt;&amp;gt;U: HTML + CSS + JS
+  U-&amp;gt;&amp;gt;U: 渲染页面
+  Note over U,S: 没有后端，全靠构建产物
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;甘特图&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+  title 一篇文章的进度
+  dateFormat YYYY-MM-DD
+  section 写作
+  列提纲        :done, a1, 2026-10-20, 1d
+  写正文        :active, a2, 2026-10-21, 3d
+  section 发布
+  改错别字      :a3, after a2, 1d
+  推送构建      :a4, after a3, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;gantt
+  title 一篇文章的进度
+  dateFormat YYYY-MM-DD
+  section 写作
+  列提纲        :done, a1, 2026-10-20, 1d
+  写正文        :active, a2, 2026-10-21, 3d
+  section 发布
+  改错别字      :a3, after a2, 1d
+  推送构建      :a4, after a3, 1d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;状态图&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram-v2
+  [*] --&amp;gt; Draft
+  Draft --&amp;gt; Review: 写完
+  Review --&amp;gt; Published: 通过
+  Review --&amp;gt; Draft: 打回
+  Published --&amp;gt; [*]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;stateDiagram-v2
+  [*] --&amp;gt; Draft
+  Draft --&amp;gt; Review: 写完
+  Review --&amp;gt; Published: 通过
+  Published --&amp;gt; [*]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;几个实用细节&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主题会自动跟随&lt;/strong&gt;：页面切到深色，图也跟着换深色主题，不用手动配两套。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无刷新换页也能画&lt;/strong&gt;：本站用 swup 做页面过渡，换页后新出现的图会自动补渲染。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;写错了会显示错误框&lt;/strong&gt;：语法不对时，图的位置会显示 &lt;code&gt;Error rendering diagram&lt;/code&gt; 和具体报错，照着改就行，不会静默消失。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图是文本&lt;/strong&gt;：可以直接被搜索、被复制、被 diff，比截图友好太多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;小结&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;关键字&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;流程图&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;flowchart TD&lt;/code&gt; / &lt;code&gt;LR&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;时序图&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;sequenceDiagram&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;甘特图&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gantt&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;状态图&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;stateDiagram-v2&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;类图&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;classDiagram&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;更多图类型看 &lt;a href=&quot;https://mermaid.js.org/intro/&quot;&gt;Mermaid 官方文档&lt;/a&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>Markdown 语法速查</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/markdown-guide/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/markdown-guide/</guid><description>写文章时最常用的 Markdown 写法，一页看完。</description><pubDate>Sat, 24 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Markdown 的好处是：用最少的心智负担，把结构表达清楚。下面是我自己写文章时会用到的部分。&lt;/p&gt;
+&lt;h2&gt;标题与段落&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;# 一级标题
+## 二级标题
+### 三级标题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;段落之间空一行即可。&lt;/p&gt;
+&lt;h2&gt;强调&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;**加粗**、*斜体*、~~删除线~~、`行内代码`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果：&lt;strong&gt;加粗&lt;/strong&gt;、&lt;em&gt;斜体&lt;/em&gt;、&lt;s&gt;删除线&lt;/s&gt;、&lt;code&gt;行内代码&lt;/code&gt;。&lt;/p&gt;
+&lt;h2&gt;列表&lt;/h2&gt;
+&lt;p&gt;无序列表用 &lt;code&gt;-&lt;/code&gt;，有序列表用 &lt;code&gt;1.&lt;/code&gt;，可以嵌套：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 第一层
+  - 第二层
+- 另一种是
+  1. 有序的
+  2. 嵌套
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;链接与图片&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;[链接文字](https://example.com)
+![图片描述](/favicon/logo.jpg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;引用&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 这是一段引用。
+&amp;gt; 可以有多行。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;表格&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;| 语法 | 效果 |
+| --- | --- |
+| `**粗**` | **粗** |
+| `*斜*` | *斜* |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;语法&lt;/th&gt;
+&lt;th&gt;效果&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**粗**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;粗&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;*斜*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;斜&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;任务列表&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;- [x] 已经做完的事
+- [ ] 还没做的事
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] 已经做完的事&lt;/li&gt;
+&lt;li&gt;[ ] 还没做的事&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;脚注&lt;/h2&gt;
+&lt;p&gt;正文里写 &lt;code&gt;这是一句话[^1]&lt;/code&gt;，文末写 &lt;code&gt;[^1]: 脚注内容&lt;/code&gt;，会得到一个可点击的角标。&lt;a href=&quot;%E5%B0%B1%E5%83%8F%E8%BF%99%E6%A0%B7%EF%BC%8C%E8%84%9A%E6%B3%A8%E5%86%85%E5%AE%B9%E4%BC%9A%E5%87%BA%E7%8E%B0%E5%9C%A8%E6%96%87%E6%9C%AB%E3%80%82&quot;&gt;^1&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;几条经验&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;一段只说一件事&lt;/strong&gt;，段落短一点更像在说话&lt;/li&gt;
+&lt;li&gt;标题层级不要跳（&lt;code&gt;#&lt;/code&gt; 之后直接 &lt;code&gt;###&lt;/code&gt; 会让结构变乱）&lt;/li&gt;
+&lt;li&gt;代码块一定标语言，高亮才有意义&lt;/li&gt;
+&lt;li&gt;少用加粗，用多了就没重点了&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>扩展语法：提示框、代码块与公式</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/markdown-extended/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/markdown-extended/</guid><description>本站支持的一些超出基础 Markdown 的写法。</description><pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;除了标准 Markdown，这个主题还接了一些扩展能力，写技术文章时挺方便。&lt;/p&gt;
+&lt;h2&gt;提示框&lt;/h2&gt;
+&lt;p&gt;用 GitHub 风格的引用语法，第一行写上类型即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; [!NOTE]
+&amp;gt; 补充说明，读不读都不影响主线。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+补充说明，读不读都不影响主线。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;支持 &lt;code&gt;NOTE&lt;/code&gt;、&lt;code&gt;TIP&lt;/code&gt;、&lt;code&gt;IMPORTANT&lt;/code&gt;、&lt;code&gt;WARNING&lt;/code&gt;、&lt;code&gt;CAUTION&lt;/code&gt; 五种：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+破坏性操作前记得备份。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!CAUTION]
+这条最重，一般用来提醒「会丢数据」的事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也可以用指令写法（效果一样）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::tip
+另一种写法。
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::tip
+另一种写法。
+:::&lt;/p&gt;
+&lt;h2&gt;代码块&lt;/h2&gt;
+&lt;p&gt;代码块用三个反引号包起来，第一行跟上语言名。高亮由 Expressive Code 接管，配色是 Catppuccin Latte（浅色）/ Mocha（深色），跟随站点主题切换。&lt;/p&gt;
+&lt;p&gt;最基础的写法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```ts
+export function greet(name: string) {
+  return `你好，${name}`
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;export function greet(name: string) {
+  return `你好，${name}`
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;标题&lt;/h3&gt;
+&lt;p&gt;在语言名后面写 &lt;code&gt;title=&quot;...&quot;&lt;/code&gt;，代码块上方会出现一条标题栏：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```ts title=&quot;greet.ts&quot;
+export function greet(name: string) {
+  return `你好，${name}`
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;export function greet(name: string) {
+  return `你好，${name}`
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;行号&lt;/h3&gt;
+&lt;p&gt;加 &lt;code&gt;showLineNumbers&lt;/code&gt; 就会显示行号：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```ts showLineNumbers
+export function greet(name: string) {
+  return `你好，${name}`
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;export function greet(name: string) {
+  return `你好，${name}`
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;高亮指定行&lt;/h3&gt;
+&lt;p&gt;用 &lt;code&gt;ins={行号}&lt;/code&gt;（或 &lt;code&gt;{起-止}&lt;/code&gt;）标出重点行，&lt;code&gt;del&lt;/code&gt; 则是删除标记：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```ts showLineNumbers ins={2}
+export function greet(name: string) {
+  return `你好，${name}`
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;export function greet(name: string) {
+  return `你好，${name}`
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;折叠&lt;/h3&gt;
+&lt;p&gt;长代码块可以用 &lt;code&gt;collapse&lt;/code&gt; 折叠成「展开」栏：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```ts collapse={2-4}
+export function greet(name: string) {
+  const prefix = &apos;你好，&apos;
+  const suffix = &apos;！&apos;
+  return prefix + name + suffix
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;export function greet(name: string) {
+  const prefix = &apos;你好，&apos;
+  const suffix = &apos;！&apos;
+  return prefix + name + suffix
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;代码块右上角还有复制按钮，点一下整段代码进剪贴板。&lt;/p&gt;
+&lt;h2&gt;图表&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;flowchart LR
+  A[写 Markdown] --&amp;gt; B{有图表吗}
+  B -- 有 --&amp;gt; C[mermaid 代码块]
+  B -- 没有 --&amp;gt; D[直接发布]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用 &lt;code&gt;mermaid&lt;/code&gt; 作为代码块的语言名，整段内容就会被渲染成图，具体写法见&lt;a href=&quot;/posts/mermaid-guide/&quot;&gt;流程图、时序图与甘特图&lt;/a&gt;。&lt;/p&gt;
+&lt;h2&gt;数学公式&lt;/h2&gt;
+&lt;p&gt;行内公式用 &lt;code&gt;$...$&lt;/code&gt;，块级公式用 &lt;code&gt;$$...$$&lt;/code&gt;，由 KaTeX 渲染：&lt;/p&gt;
+&lt;p&gt;质能方程 $E = mc^2$，以及一个块级式子：&lt;/p&gt;
+&lt;p&gt;$$
+\int_{-\infty}^{\infty} e^{-x^2},\mathrm{d}x = \sqrt{\pi}
+$$&lt;/p&gt;
+&lt;p&gt;写机器学习或算法笔记时，这个支持能省掉截图公式的麻烦。&lt;/p&gt;
+&lt;h2&gt;折叠内容&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt; 原生标签也能用：&lt;/p&gt;
+&lt;p&gt;&amp;lt;details&amp;gt;
+&amp;lt;summary&amp;gt;点开看一段被折叠的内容&amp;lt;/summary&amp;gt;&lt;/p&gt;
+&lt;p&gt;折叠区里可以放任意 Markdown，包括代码和公式。&lt;/p&gt;
+&lt;p&gt;&amp;lt;/details&amp;gt;&lt;/p&gt;
+&lt;h2&gt;小结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;提示框：&lt;code&gt;&amp;gt; [!TYPE]&lt;/code&gt; 或 &lt;code&gt;:::type&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;代码块：Expressive Code（标题 &lt;code&gt;title&lt;/code&gt;、行号 &lt;code&gt;showLineNumbers&lt;/code&gt;、高亮 &lt;code&gt;{2}&lt;/code&gt;、折叠 &lt;code&gt;collapse&lt;/code&gt;、复制按钮）&lt;/li&gt;
+&lt;li&gt;图表：&lt;code&gt;mermaid&lt;/code&gt; 代码块&lt;/li&gt;
+&lt;li&gt;公式：&lt;code&gt;$...$&lt;/code&gt; 与 &lt;code&gt;$$...$$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;其它：原生 HTML 标签基本都能用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;够用了，剩下的交给内容。&lt;/p&gt;
+</content:encoded></item><item><title>在文章里嵌入视频</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/video-embed/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/video-embed/</guid><description>用 iframe 把 B 站、YouTube 的视频放进文章。</description><pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Markdown 本身没有视频语法，但文章里可以直接写 HTML，所以嵌入外部播放器的 iframe 就够了。&lt;/p&gt;
+&lt;h2&gt;B 站&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;iframe
+  src=&quot;//player.bilibili.com/player.html?bvid=BV1GJ411x7h7&amp;amp;page=1&amp;amp;autoplay=0&quot;
+  width=&quot;100%&quot;
+  height=&quot;468&quot;
+  frameborder=&quot;0&quot;
+  allowfullscreen&amp;gt;
+&amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;p&gt;&amp;lt;iframe src=&quot;//player.bilibili.com/player.html?bvid=BV1GJ411x7h7&amp;amp;page=1&amp;amp;autoplay=0&quot; width=&quot;100%&quot; height=&quot;468&quot; frameborder=&quot;0&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
+&lt;h2&gt;YouTube&lt;/h2&gt;
+&lt;p&gt;把 &lt;code&gt;VIDEO_ID&lt;/code&gt; 换成视频地址里 &lt;code&gt;v=&lt;/code&gt; 后面那一段：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;iframe
+  src=&quot;https://www.youtube.com/embed/VIDEO_ID&quot;
+  width=&quot;100%&quot;
+  height=&quot;468&quot;
+  frameborder=&quot;0&quot;
+  allowfullscreen&amp;gt;
+&amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;本地视频&lt;/h2&gt;
+&lt;p&gt;如果视频文件不大，也可以直接放在 &lt;code&gt;public/&lt;/code&gt; 下，用原生 &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; 播放：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;video src=&quot;/videos/demo.mp4&quot; controls width=&quot;100%&quot;&amp;gt;&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;提醒&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;iframe 里的内容来自第三方，对方被墙或改地址都会让播放器显示空白&lt;/li&gt;
+&lt;li&gt;竖屏视频的高度别写死 468，改成 &lt;code&gt;aspect-ratio&lt;/code&gt; 更稳&lt;/li&gt;
+&lt;li&gt;视频比图片重得多，文章里放太多会明显拖慢加载&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>写一篇文章的完整流程</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/writing-workflow/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/writing-workflow/</guid><description>从新建文件到本地预览，本站的写作流程和 frontmatter 字段说明。</description><pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;记录一下自己写文章时的固定动作，省得每次都想一遍。&lt;/p&gt;
+&lt;h2&gt;1. 新建文章&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pnpm new-post 文章标题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;会在 &lt;code&gt;src/content/posts/&lt;/code&gt; 下生成一个带 frontmatter 的 Markdown 文件。也可以直接手动建文件，文件名会成为 URL：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src/content/posts/my-note.md  →  /posts/my-note/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;2. 填写 frontmatter&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;---
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
+title: 文章标题
+published: 2026-10-21
+description: 出现在列表和搜索结果里的一句话摘要
+tags: [标签一, 标签二]
+category: 分类
 draft: false
+lang: zh_CN
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Attribute&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The title of the post.&lt;/td&gt;
+&lt;td&gt;标题&lt;/td&gt;
+&lt;td&gt;必填&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;published&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The date the post was published.&lt;/td&gt;
+&lt;td&gt;发布日期&lt;/td&gt;
+&lt;td&gt;必填，决定排序&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;pinned&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether this post is pinned to the top of the post list.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;priority&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The priority of the pinned post. Smaller value means higher priority (0, 1, 2...).&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;updated&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;更新日期&lt;/td&gt;
+&lt;td&gt;可选，显示「已更新」&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A short description of the post. Displayed on index page.&lt;/td&gt;
+&lt;td&gt;摘要&lt;/td&gt;
+&lt;td&gt;影响列表和 SEO&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;image&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The cover image path of the post.&amp;lt;br/&amp;gt;1. Start with &lt;code&gt;http://&lt;/code&gt; or &lt;code&gt;https://&lt;/code&gt;: Use web image&amp;lt;br/&amp;gt;2. Start with &lt;code&gt;/&lt;/code&gt;: For image in &lt;code&gt;public&lt;/code&gt; dir&amp;lt;br/&amp;gt;3. With none of the prefixes: Relative to the markdown file&lt;/td&gt;
+&lt;td&gt;封面图&lt;/td&gt;
+&lt;td&gt;相对当前文件的路径&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The tags of the post.&lt;/td&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;td&gt;数组，可多个&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;category&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The category of the post.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;licenseName&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The license name for the post content.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;author&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The author of the post.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;sourceLink&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The source link or reference for the post content.&lt;/td&gt;
+&lt;td&gt;分类&lt;/td&gt;
+&lt;td&gt;单值&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;draft&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;If this post is still a draft, which won&apos;t be displayed.&lt;/td&gt;
+&lt;td&gt;草稿&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;true&lt;/code&gt; 时不出现在生产构建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pinned&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;置顶&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;true&lt;/code&gt; 时排在文章列表最前&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;lang&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文章语言&lt;/td&gt;
+&lt;td&gt;如 &lt;code&gt;zh_CN&lt;/code&gt;、&lt;code&gt;en&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;Where to Place the Post Files&lt;/h2&gt;
-&lt;p&gt;Your post files should be placed in &lt;code&gt;src/content/posts/&lt;/code&gt; directory. You can also create sub-directories to better organize your posts and assets.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;src/content/posts/
-├── post-1.md
-└── post-2/
-    ├── cover.webp
-    └── index.md
+&lt;h2&gt;3. 本地预览&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pnpm dev
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Markdown Mermaid</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/markdown-mermaid/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/markdown-mermaid/</guid><description>A simple example of a Markdown blog post with Mermaid.</description><pubDate>Sun, 01 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Complete Guide to Markdown with Mermaid Diagrams&lt;/h1&gt;
-&lt;p&gt;This article demonstrates how to create various complex diagrams using Mermaid in Markdown documents, including flowcharts, sequence diagrams, Gantt charts, class diagrams, and state diagrams.&lt;/p&gt;
-&lt;h2&gt;Flowchart Example&lt;/h2&gt;
-&lt;p&gt;Flowcharts are excellent for representing processes or algorithm steps.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;graph TD
-    A[Start] --&amp;gt; B{Condition Check}
-    B --&amp;gt;|Yes| C[Process Step 1]
-    B --&amp;gt;|No| D[Process Step 2]
-    C --&amp;gt; E[Subprocess]
-    D --&amp;gt; E
-    subgraph E [Subprocess Details]
-        E1[Substep 1] --&amp;gt; E2[Substep 2]
-        E2 --&amp;gt; E3[Substep 3]
-    end
-    E --&amp;gt; F{Another Decision}
-    F --&amp;gt;|Option 1| G[Result 1]
-    F --&amp;gt;|Option 2| H[Result 2]
-    F --&amp;gt;|Option 3| I[Result 3]
-    G --&amp;gt; J[End]
-    H --&amp;gt; J
-    I --&amp;gt; J
+&lt;p&gt;打开 http://localhost:4321 看效果，改文件会自动热更新。&lt;/p&gt;
+&lt;h2&gt;4. 构建&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;pnpm build
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Sequence Diagram Example&lt;/h2&gt;
-&lt;p&gt;Sequence diagrams show interactions between objects over time.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sequenceDiagram
-    participant User
-    participant WebApp
-    participant Server
-    participant Database
-
-    User-&amp;gt;&amp;gt;WebApp: Submit Login Request
-    WebApp-&amp;gt;&amp;gt;Server: Send Auth Request
-    Server-&amp;gt;&amp;gt;Database: Query User Credentials
-    Database--&amp;gt;&amp;gt;Server: Return User Data
-    Server--&amp;gt;&amp;gt;WebApp: Return Auth Result
-    
-    alt Auth Successful
-        WebApp-&amp;gt;&amp;gt;User: Show Welcome Page
-        WebApp-&amp;gt;&amp;gt;Server: Request User Data
-        Server-&amp;gt;&amp;gt;Database: Get User Preferences
-        Database--&amp;gt;&amp;gt;Server: Return Preferences
-        Server--&amp;gt;&amp;gt;WebApp: Return User Data
-        WebApp-&amp;gt;&amp;gt;User: Load Personalized Interface
-    else Auth Failed
-        WebApp-&amp;gt;&amp;gt;User: Show Error Message
-        WebApp-&amp;gt;&amp;gt;User: Prompt Re-entry
-    end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Gantt Chart Example&lt;/h2&gt;
-&lt;p&gt;Gantt charts are perfect for displaying project schedules and timelines.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gantt
-    title Website Development Project Timeline
-    dateFormat  YYYY-MM-DD
-    axisFormat  %m/%d
-    
-    section Design Phase
-    Requirements Analysis      :a1, 2023-10-01, 7d
-    UI Design                 :a2, after a1, 10d
-    Prototype Creation        :a3, after a2, 5d
-    
-    section Development Phase
-    Frontend Development      :b1, 2023-10-20, 15d
-    Backend Development       :b2, after a2, 18d
-    Database Design           :b3, after a1, 12d
-    
-    section Testing Phase
-    Unit Testing              :c1, after b1, 8d
-    Integration Testing       :c2, after b2, 10d
-    User Acceptance Testing   :c3, after c2, 7d
-    
-    section Deployment
-    Production Deployment     :d1, after c3, 3d
-    Launch                    :milestone, after d1, 0d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Class Diagram Example&lt;/h2&gt;
-&lt;p&gt;Class diagrams show the static structure of a system, including classes, attributes, methods, and their relationships.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;classDiagram
-    class User {
-        +String username
-        +String password
-        +String email
-        +Boolean active
-        +login()
-        +logout()
-        +updateProfile()
-    }
-    
-    class Article {
-        +String title
-        +String content
-        +Date publishDate
-        +Boolean published
-        +publish()
-        +edit()
-        +delete()
-    }
-    
-    class Comment {
-        +String content
-        +Date commentDate
-        +addComment()
-        +deleteComment()
-    }
-    
-    class Category {
-        +String name
-        +String description
-        +addArticle()
-        +removeArticle()
-    }
-    
-    User &quot;1&quot; -- &quot;*&quot; Article : writes
-    User &quot;1&quot; -- &quot;*&quot; Comment : posts
-    Article &quot;1&quot; -- &quot;*&quot; Comment : has
-    Article &quot;1&quot; -- &quot;*&quot; Category : belongs to
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;State Diagram Example&lt;/h2&gt;
-&lt;p&gt;State diagrams show the sequence of states an object goes through during its life cycle.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;stateDiagram-v2
-    [*] --&amp;gt; Draft
-    
-    Draft --&amp;gt; UnderReview : submit
-    UnderReview --&amp;gt; Draft : reject
-    UnderReview --&amp;gt; Approved : approve
-    Approved --&amp;gt; Published : publish
-    Published --&amp;gt; Archived : archive
-    Published --&amp;gt; Draft : retract
-    
-    state Published {
-        [*] --&amp;gt; Active
-        Active --&amp;gt; Hidden : temporarily hide
-        Hidden --&amp;gt; Active : restore
-        Active --&amp;gt; [*]
-        Hidden --&amp;gt; [*]
-    }
-    
-    Archived --&amp;gt; [*]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Pie Chart Example&lt;/h2&gt;
-&lt;p&gt;Pie charts are ideal for displaying proportions and percentage data.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;pie title Website Traffic Sources Analysis
-    &quot;Search Engines&quot; : 45.6
-    &quot;Direct Access&quot; : 30.1
-    &quot;Social Media&quot; : 15.3
-    &quot;Referral Links&quot; : 6.4
-    &quot;Other Sources&quot; : 2.6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Mermaid is a powerful tool for creating various types of diagrams in Markdown documents. This article demonstrated how to use flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, and pie charts. These diagrams can help you express complex concepts, processes, and data structures more clearly.&lt;/p&gt;
-&lt;p&gt;To use Mermaid, simply specify the mermaid language in a code block and describe the diagram using concise text syntax. Mermaid will automatically convert these descriptions into beautiful visual diagrams.&lt;/p&gt;
-&lt;p&gt;Try using Mermaid diagrams in your next technical blog post or project documentation - they will make your content more professional and easier to understand!&lt;/p&gt;
-</content:encoded></item><item><title>Include Video in the Posts</title><link>https://lzh8639-max.github.io/mizuki-blog/posts/video/</link><guid isPermaLink="true">https://lzh8639-max.github.io/mizuki-blog/posts/video/</guid><description>This post demonstrates how to include embedded video in a blog post.</description><pubDate>Mon, 01 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: Include Video in the Post
-published: 2023-10-19
-// ...
----
-
-&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;YouTube&lt;/h2&gt;
-&lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
-&lt;h2&gt;Bilibili&lt;/h2&gt;
-&lt;p&gt;&amp;lt;iframe width=&quot;100%&quot; height=&quot;468&quot; src=&quot;//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&amp;amp;p=1&amp;amp;autoplay=0&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; &amp;amp;autoplay=0&amp;gt; &amp;lt;/iframe&amp;gt;&lt;/p&gt;
+&lt;p&gt;构建过程做了三件事：先抓一次 GitHub 贡献数据作为快照，再 &lt;code&gt;astro build&lt;/code&gt; 生成静态页面，最后跑 Pagefind 建立全站搜索索引。产物在 &lt;code&gt;dist/&lt;/code&gt;。&lt;/p&gt;
+&lt;h2&gt;5. 发布&lt;/h2&gt;
+&lt;p&gt;把 &lt;code&gt;dist/&lt;/code&gt; 交给任意静态托管即可。本站暂时只在本地跑，部署的事以后再说。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+写长文时我会先列提纲，再用 &lt;code&gt;##&lt;/code&gt; 一级结构把提纲变成小标题，最后才往里填内容——这样不容易写散。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item></channel></rss>

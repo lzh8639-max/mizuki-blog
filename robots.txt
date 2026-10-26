@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /
-Allow: /$
-Allow: /posts/
+Allow: /
 
 Sitemap: https://lzh8639-max.github.io/mizuki-blog/sitemap-index.xml
