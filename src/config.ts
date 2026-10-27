@@ -57,11 +57,12 @@ export const navBarConfig: NavBarConfig = {
       name: '关于',
       url: '/about/',
     },
-    {
-      icon: 'material-symbols:link-rounded',
-      name: '友链',
-      url: '/links/',
-    },
+    // 友链已关闭（导航项与 /links/ 页面一并下线），需要时恢复 src/pages/links.astro 后再打开
+    // {
+    //   icon: 'material-symbols:link-rounded',
+    //   name: '友链',
+    //   url: '/links/',
+    // },
     // 留言板需要先在仓库开启 Discussions 并安装 giscus 应用，
     // 填好 src/components/widget/Comments.svelte 里的 repoId / categoryId 后再打开
     // {
